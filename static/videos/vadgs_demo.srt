@@ -1,0 +1,84 @@
+1
+00:00:00,000 --> 00:00:12,000
+In this video, we are delighted to introduce VAD-GS, Visibility-Aware Densification for 3D Gaussian Splatting in Dynamic Urban Scenes.
+
+2
+00:00:14,000 --> 00:00:21,000
+Unlike object-centric settings, vehicle-mounted sensors are constrained by the driving trajectory.
+
+3
+00:00:22,000 --> 00:00:31,500
+Existing GS methods achieve high-quality novel view synthesis with dense training views and well-initialized point clouds.
+
+4
+00:00:32,000 --> 00:00:41,900
+However, their performance drops under large viewpoint changes, since photometric-based optimization fails to recover accurate geometry,
+
+5
+00:00:42,000 --> 00:00:48,000
+especially in dynamic urban scenes where both ego and surrounding vehicles are moving.
+
+6
+00:00:50,200 --> 00:00:54,700
+To address this challenge, our framework is designed as follows.
+
+7
+00:00:55,200 --> 00:01:02,000
+First, we analyze structural completeness for each static and dynamic instance in the reference image.
+
+8
+00:01:02,100 --> 00:01:11,000
+Through voxel-based visibility reasoning, our method generates a voxel distance map and a voxel index map for each view.
+
+9
+00:01:11,100 --> 00:01:20,500
+These maps are rasterized with z-buffering, enabling natural occlusion handling, and precise pixel-to-voxel mapping.
+
+10
+00:01:21,000 --> 00:01:25,000
+Each voxel corresponds to multiple observed views.
+
+11
+00:01:25,500 --> 00:01:31,500
+We select the most diverse supporting views that covers the object with strong stereo cues.
+
+12
+00:01:31,600 --> 00:01:36,500
+These views are transformed into the object’s local coordinate frame,
+
+13
+00:01:36,600 --> 00:01:42,000
+enabling MVS reconstruction whether the object is static or in motion.
+
+14
+00:01:42,500 --> 00:01:48,000
+The recovered geometry is then used as a prior for further optimization.
+
+15
+00:01:50,000 --> 00:02:00,900
+Extensive experiments on the Waymo and nuScenes datasets demonstrate that VAD-GS outperforms state-of-the-art 3DGS approaches,
+
+16
+00:02:01,000 --> 00:02:07,400
+and significantly enhances the reconstructed geometry for both static and dynamic objects.
+
+17
+00:02:08,000 --> 00:02:17,500
+Compared with the baseline results, the normal maps produced by VAD-GS exhibit flatter and more continuous road and wall surfaces,
+
+18
+00:02:18,000 --> 00:02:24,000
+while the depth maps show higher geometric consistency with fewer fragmented structures.
+
+19
+00:02:25,600 --> 00:02:35,500
+For scene components that are poorly initialized, such as the traffic sign in the yellow circle, which is too high to be captured by LiDAR,
+
+20
+00:02:36,000 --> 00:02:47,500
+our method successfully reconstructs the geometry with minimal floating artifacts, and avoids erroneously projecting white text onto the foliage behind the sign.
+
+21
+00:03:02,000 --> 00:03:05,500
+Thank you for watching.
+
