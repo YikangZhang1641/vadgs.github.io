@@ -1,8 +1,8 @@
 # VAD-GS
 
-This is the repository that contains source code for the [VAD-GS website](https://vadgs.github.io).
+This is the repository that contains source code for the [VAD-GS website](https://yikangzhang1641.github.io/vadgs.github.io/).
 
-If you find VADGS useful for your work please cite:
+If you find VAD-GS useful for your work please cite:
 ```
 @misc{zhang2025vadgs,
       title={Visibility-Aware Densification for 3D Gaussian Splatting in Dynamic Urban Scenes}, 
