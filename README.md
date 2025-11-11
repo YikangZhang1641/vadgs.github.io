@@ -1,8 +1,8 @@
-# Nerfies
+# VAD-GS
 
 This is the repository that contains source code for the [VAD-GS website](https://vadgs.github.io).
 
-If you find Nerfies useful for your work please cite:
+If you find VADGS useful for your work please cite:
 ```
 @misc{zhang2025vadgs,
       title={Visibility-Aware Densification for 3D Gaussian Splatting in Dynamic Urban Scenes}, 
